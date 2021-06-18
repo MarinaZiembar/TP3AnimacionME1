@@ -1,4 +1,110 @@
-body{
-  margin:0;
-  padding:0;
+@font-face {
+  font-family: "Comic";
+  src:  url('./font/ActionMan.woff2') format('woff2'),
+        url('./font/ActionMan.woff') format('woff'),
+        url('./font/ActionMan.ttf') format('truetype');
+}
+
+
+html, body{
+  box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+  font-family:'Comic';
+}
+
+.App{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.row{
+  width:80%;
+  display:flex;
+  padding-bottom:3%;
+}
+
+.title{
+  width:80%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin:40px 0px 60px 0px;
+}
+
+.title h1{
+  font-size:60px;
+}
+
+.botonera{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  padding:0px 30px;
+}
+
+.boton img{
+  width:30px;
+  cursor:pointer;
+  transition:all 0.4s ease;
+}
+
+.boton img:hover{
+  transform:translatey(-3px);
+}
+
+.boton p{
+  
+}
+
+.gif-1{
+  width:64%;
+  padding-right:3%;
+}
+
+.gif-2{
+  width:33%;
+}
+
+.gif-3,
+.gif-8,
+.gif-12,
+.gif-13{
+  width:100%;
+}
+
+.gif-4{
+  width:33%;
+  padding-right:3%;
+}
+
+.gif-5{
+  width:64%;
+}
+
+.gif-6{
+  width:48.5%;
+  padding-right:3%;
+}
+
+.gif-7{
+  width:48.5%;
+}
+
+.gif-9,
+.gif-10{
+  width:32.3%;
+  padding-right:3%;
+}
+
+.gif-11{
+  width:32.3%;
 }
