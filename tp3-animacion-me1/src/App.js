@@ -7,19 +7,17 @@ import gif4 from './img/gif-4.gif';
 import gif5 from './img/gif-5.gif';
 import gif6 from './img/gif-6.gif';
 import gif7 from './img/gif-7.gif';
-// import gif8 from './img/gif-8.gif';
+import gif8 from './img/gif-8.gif';
 import gif9 from './img/gif-9.gif';
-// import gif10 from './img/gif-10.gif';
+import gif10 from './img/gif-10.gif';
 import gif11 from './img/gif-11.gif';
 import gif12 from './img/gif-12.gif';
 import gif13 from './img/gif-13.gif';
 
-// import audio1 from './sounds/audio1.mp3';
-// import audio1v2 from './sounds/audio1.ogg';
-// import audio2 from './sounds/audio2.mp3';
-// import audio2v2 from './sounds/audio2.ogg';
-// import audio3 from './sounds/audio3.mp3';
-// import audio3v2 from './sounds/audio3.ogg';
+import audio1 from './sounds/audio1.mp3';
+import audio2 from './sounds/audio2.mp3';
+import audio3 from './sounds/audio3.mp3';
+import audio4 from './sounds/audio4.mp3';
 
 import play from './img/play.svg';
 import pause from './img/pause.svg';
@@ -32,18 +30,21 @@ function App() {
   const [sound1, setSound1] = useState(false);
   const [sound2, setSound2] = useState(false);
   const [sound3, setSound3] = useState(false);
+  const [sound4, setSound4] = useState(false);
 
   useEffect(() => {
     
-    // const prueba1 = document.getElementById('sound-1');
-    // const prueba2 = document.getElementById('sound-2');
-    // const prueba3 = document.getElementById('sound-3');
+    const prueba1 = document.getElementById('sound-1');
+    const prueba2 = document.getElementById('sound-2');
+    const prueba3 = document.getElementById('sound-3');
+    const prueba4 = document.getElementById('sound-4');
 
-    // sound1 ? prueba1.play() : prueba1.pause();
-    // sound2 ? prueba2.play() : prueba2.pause();
-    // sound3 ? prueba3.play() : prueba3.pause();
+    sound1 ? prueba1.play() : prueba1.pause();
+    sound2 ? prueba2.play() : prueba2.pause();
+    sound3 ? prueba3.play() : prueba3.pause();
+    sound4 ? prueba4.play() : prueba4.pause();
 
-  }, [sound1, sound2, sound3])
+  }, [sound1, sound2, sound3, sound4])
   
 
   return (
@@ -55,10 +56,9 @@ function App() {
         <div className="botonera">
 
           <div className="boton">
-            {/* <audio loop id="sound-1">
+            <audio loop id="sound-1">
                 <source src={audio1} type="audio/mpeg"/>
-                <source src={audio1v2} type="audio/ogg"/>
-            </audio> */}
+            </audio>
             <img 
               src={!sound1 ? play : pause}
               onClick={() => sound1 ? setSound1(false) : setSound1(true)} 
@@ -69,10 +69,9 @@ function App() {
           </div>
 
           <div className="boton">
-            {/* <audio loop id="sound-2">
+            <audio loop id="sound-2">
                 <source src={audio2} type="audio/mpeg"/>
-                <source src={audio2v2} type="audio/ogg"/>
-            </audio> */}
+            </audio>
             <img 
               src={!sound2 ? play : pause}
               onClick={() => sound2 ? setSound2(false) : setSound2(true)} 
@@ -83,10 +82,9 @@ function App() {
           </div>
 
           <div className="boton">
-            {/* <audio loop id="sound-3">
+            <audio loop id="sound-3">
                 <source src={audio3} type="audio/mpeg"/>
-                <source src={audio3v2} type="audio/ogg"/>
-            </audio> */}
+            </audio> 
             <img 
               src={!sound3 ? play : pause}
               onClick={() => sound3 ? setSound3(false) : setSound3(true)} 
@@ -94,6 +92,19 @@ function App() {
               alt="boton-3"
             />
             <p>Opción 3</p>
+          </div>
+
+          <div className="boton">
+            <audio loop id="sound-4">
+                <source src={audio4} type="audio/mpeg"/>
+            </audio> 
+            <img 
+              src={!sound4 ? play : pause}
+              onClick={() => sound4 ? setSound4(false) : setSound4(true)} 
+              className="boton-4" 
+              alt="boton-4"
+            />
+            <p>Opción 4</p>
           </div>
 
         </div>
@@ -119,12 +130,12 @@ function App() {
       </div>
 
       <div className="row row-5">
-        {/* <img src={gif8} className="gif-8" alt="gif-8"/> */}
+        <img src={gif8} className="gif-8" alt="gif-8"/> 
       </div>
 
       <div className="row row-6">
         <img src={gif9} className="gif-9" alt="gif-9"/>
-        {/* <img src={gif10} className="gif-10" alt="gif-10"/> */}
+        <img src={gif10} className="gif-10" alt="gif-10"/> 
         <img src={gif11} className="gif-11" alt="gif-11"/>
       </div>
 
