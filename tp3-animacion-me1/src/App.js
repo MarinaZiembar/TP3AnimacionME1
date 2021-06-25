@@ -15,9 +15,6 @@ import gif12 from './img/gif-12.gif';
 import gif13 from './img/gif-13.gif';
 
 import audio1 from './sounds/audio1.mp3';
-import audio2 from './sounds/audio2.mp3';
-import audio3 from './sounds/audio3.mp3';
-import audio4 from './sounds/audio4.mp3';
 
 import play from './img/play.svg';
 import pause from './img/pause.svg';
@@ -28,23 +25,14 @@ import './App.css';
 function App() {
 
   const [sound1, setSound1] = useState(false);
-  const [sound2, setSound2] = useState(false);
-  const [sound3, setSound3] = useState(false);
-  const [sound4, setSound4] = useState(false);
 
   useEffect(() => {
     
     const prueba1 = document.getElementById('sound-1');
-    const prueba2 = document.getElementById('sound-2');
-    const prueba3 = document.getElementById('sound-3');
-    const prueba4 = document.getElementById('sound-4');
 
-    sound1 ? prueba1.play() : prueba1.pause();
-    sound2 ? prueba2.play() : prueba2.pause();
-    sound3 ? prueba3.play() : prueba3.pause();
-    sound4 ? prueba4.play() : prueba4.pause();
+    sound1 ? prueba1?.play() : prueba1?.pause();
 
-  }, [sound1, sound2, sound3, sound4])
+  }, [sound1])
   
 
   return (
@@ -65,46 +53,6 @@ function App() {
               className="boton-1" 
               alt="boton-1"
             />
-            <p>Opción 1</p>
-          </div>
-
-          <div className="boton">
-            <audio loop id="sound-2">
-                <source src={audio2} type="audio/mpeg"/>
-            </audio>
-            <img 
-              src={!sound2 ? play : pause}
-              onClick={() => sound2 ? setSound2(false) : setSound2(true)} 
-              className="boton-2" 
-              alt="boton-2"
-            />
-            <p>Opción 2</p>
-          </div>
-
-          <div className="boton">
-            <audio loop id="sound-3">
-                <source src={audio3} type="audio/mpeg"/>
-            </audio> 
-            <img 
-              src={!sound3 ? play : pause}
-              onClick={() => sound3 ? setSound3(false) : setSound3(true)} 
-              className="boton-3" 
-              alt="boton-3"
-            />
-            <p>Opción 3</p>
-          </div>
-
-          <div className="boton">
-            <audio loop id="sound-4">
-                <source src={audio4} type="audio/mpeg"/>
-            </audio> 
-            <img 
-              src={!sound4 ? play : pause}
-              onClick={() => sound4 ? setSound4(false) : setSound4(true)} 
-              className="boton-4" 
-              alt="boton-4"
-            />
-            <p>Opción 4</p>
           </div>
 
         </div>
